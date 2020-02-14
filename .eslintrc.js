@@ -5,7 +5,7 @@ module.exports = {
     jest: true
   },
   extends: [
-    'standard'
+    'standard',
   ],
   globals: {
     Atomics: 'readonly',
@@ -13,12 +13,16 @@ module.exports = {
   },
   parser: '@typescript-eslint/parser',
   parserOptions: {
-    ecmaVersion: 2018,
-    sourceType: 'module'
+    ecmaVersion: 2019,
+    sourceType: 'module',
+    project: './tsconfig.json'
   },
   plugins: [
     '@typescript-eslint'
   ],
   rules: {
+
+    "no-unused-vars": "off",
+
   }
 }
